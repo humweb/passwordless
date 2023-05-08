@@ -2,9 +2,9 @@
 
 namespace Humweb\Passwordless\Tests;
 
+use Humweb\Passwordless\PasswordlessServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Humweb\Passwordless\PasswordlessServiceProvider;
 
 class TestCase extends Orchestra
 {
