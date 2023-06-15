@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Humweb\Passwordless\Mail\Auth;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -17,7 +16,8 @@ final class LoginLink extends Mailable
 
     public function __construct(
         public readonly string $url,
-    ) {}
+    ) {
+    }
 
     public function envelope(): Envelope
     {
