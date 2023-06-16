@@ -20,6 +20,6 @@ class PasswordlessServiceProvider extends PackageServiceProvider
             ->hasRoute('web')
             ->hasConfigFile();
 
-        app('router')->aliasMiddleware('signed-login', ValidateSignature::class);
+        app('router')->aliasMiddleware('signed', ValidateSignature::class);
     }
 }
