@@ -21,7 +21,7 @@ class Passwordless
         $prefix = $format == 'svg' ? 'data:image/svg+xml;base64, ' : 'data:image/png;base64, ';
 
         return '<img src="'.$prefix.base64_encode(QrCode::format($format)
-                ->size($size)
-                ->generate($url)).'">';
+            ->size($size)
+            ->generate($url)).'">';
     }
 }
