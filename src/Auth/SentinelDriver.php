@@ -9,6 +9,6 @@ class SentinelDriver extends Driver
 {
     public function login(AuthenticatableContract $user)
     {
-        Sentinel::login($user);
+        Sentinel::loginByUserId($user->getAuthIdentifier());
     }
 }
