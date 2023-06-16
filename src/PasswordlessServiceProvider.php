@@ -2,7 +2,6 @@
 
 namespace Humweb\Passwordless;
 
-use Humweb\Passwordless\Http\Middleware\ValidateSignature;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
