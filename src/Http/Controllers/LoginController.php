@@ -23,7 +23,7 @@ final class LoginController
         /**
          * @var Authenticatable $user
          */
-        $user = $userModel::query()->where($request->only(config('passwordess.parameters'))->all())->firstOrFail();
+        $user = $userModel::query()->where($request->only(config('passwordless.parameters')))->firstOrFail();
 
         $manager->login($user);
 
