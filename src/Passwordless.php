@@ -16,10 +16,12 @@ class Passwordless
         );
     }
 
-    public function qrCode(string $url, int|string $size = 256, string $format = 'png'): string
+    public function qrCode(string $url, int|string $size = 256, string $format = 'svg'): string
     {
-        return '<img src="data:image/png;base64, '.base64_encode(QrCode::format($format)
-            ->size($size)
-            ->generate($url)).'">';
+        $prefix = $format == 'svg' ? 'data:image/svg+xml;base64, ' : 'data:image/png;base64, ';
+
+        return '<img src="'.$prefix.base64_encode(QrCode::format($format)
+                ->size($size)
+                ->generate($url)).'">';
     }
 }
