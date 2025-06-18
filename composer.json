@@ -15,7 +15,7 @@
             "role": "Developer"
         }
     ],
-    "respositories":[
+  "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/LetsGoLearn/simple-qrcode.git"
